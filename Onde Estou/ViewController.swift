@@ -9,6 +9,12 @@ class ViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDeleg
     @IBOutlet weak var mapa: MKMapView!
     var gerenciadorLocalizacao = CLLocationManager()
     
+    @IBOutlet weak var velocidadeLabel: UILabel!
+    @IBOutlet weak var endereco: UILabel!
+    @IBOutlet weak var latitudeLabel: UILabel!
+    @IBOutlet weak var longitudeLabel: UILabel!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +23,24 @@ class ViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDeleg
         gerenciadorLocalizacao.desiredAccuracy = kCLLocationAccuracyBest //melhor localizacao
         gerenciadorLocalizacao.requestWhenInUseAuthorization()           //solicitacao
         gerenciadorLocalizacao.startUpdatingLocation()         //MONITORAR LOCALIZACAO
+        
+    }
+    
+    // exibindo dados
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+       let localizacaoUsuario = locations.last
+        
+        let latitude = localizacaoUsuario!.coordinate.latitude
+        let longitude = localizacaoUsuario!.coordinate.longitude
+        
+        longitudeLabel.text = String(longitude)
+        latitudeLabel.text = String(latitude)
+        
+        velocidadeLabel.text = String(localizacaoUsuario!.speed)
+        
+        
         
     }
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
