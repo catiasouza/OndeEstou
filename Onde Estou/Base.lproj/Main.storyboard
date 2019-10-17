@@ -16,16 +16,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uxF-gH-MnC">
-                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="57"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="aEu-x3-3JD"/>
+                                    <constraint firstAttribute="height" constant="57" id="Sca-KF-f7X"/>
                                 </constraints>
                                 <items>
                                     <navigationItem title="Onde estou?" id="Us8-d8-H5Y"/>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jm9-u4-4bP">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jm9-u4-4bP">
                                 <rect key="frame" x="0.0" y="96" width="414" height="172"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Velocidade" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntv-qd-Qtu">
                                         <rect key="frame" x="20" y="39" width="106" height="21"/>
@@ -99,10 +100,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="uxF-gH-MnC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5dj-vI-35X"/>
-                            <constraint firstItem="uxF-gH-MnC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QYN-cG-aIL"/>
-                            <constraint firstItem="uxF-gH-MnC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dIS-Bq-fqi"/>
-                            <constraint firstItem="Jm9-u4-4bP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="ovp-Yi-oF6"/>
+                            <constraint firstItem="uxF-gH-MnC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aRj-Oh-Im1"/>
+                            <constraint firstItem="uxF-gH-MnC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dsL-2W-CeL"/>
+                            <constraint firstItem="uxF-gH-MnC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nvr-bq-HsC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
